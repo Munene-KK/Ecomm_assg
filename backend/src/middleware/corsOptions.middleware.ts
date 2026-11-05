@@ -3,12 +3,13 @@ import type { CorsOptions } from "cors";
 
 export const corsOptions: CorsOptions = {
   origin: (origin, callback) => {
-    if (origin && whiteList.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error(`NOT ALLOWED BY CORS`));
-    }
+    const allowed =
+      !origin ||
+      whiteList.includes(origin) ||
+      /^https:\/\/([a-z0-9]+--)?eccomassg\.netlify\.app$/.test(origin);
+
+    if (allowed) callback(null, true);
+    else callback(new Error("Not allowed by CORS"));
   },
-  optionsSuccessStatus: 200,
-  credentials: true,
+  methods: ["GET", "POST", "PATCH", "DELETE"],
 };
