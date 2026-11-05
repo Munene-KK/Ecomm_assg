@@ -1,7 +1,6 @@
 import type { Request, Response } from "express";
 import { Admin } from "../../model/admin.model";
 import type { AdminsObJ } from "../../types/types";
-import { isStrongPassword } from "validator";
 import validator from "validator";
 import bcrypt from "bcrypt";
 export const getAdmins = async (req: Request, res: Response) => {
@@ -29,7 +28,7 @@ export const createAdmin = async (req: Request, res: Response) => {
     return res.status(400).json({ error: "Invalid email" });
   }
   //validate pswd strength
-  if (!isStrongPassword(password)) {
+  if (!validator.isStrongPassword(password)) {
     return res.status(400).json({ error: "Weak password" });
   }
   //duplicate email
