@@ -1,7 +1,8 @@
 import type { Request, Response } from "express";
 import { Admin } from "../../model/admin.model";
 import type { AdminsObJ } from "../../types/types";
-import { isEmail, isStrongPassword } from "validator";
+import { isStrongPassword } from "validator";
+import validator from "validator";
 import bcrypt from "bcrypt";
 export const getAdmins = async (req: Request, res: Response) => {
   const admins = await Admin.find({})
@@ -24,7 +25,7 @@ export const createAdmin = async (req: Request, res: Response) => {
     return res.status(400).json({ error: "All fields are required!" });
   }
   //validate email
-  if (!isEmail(email)) {
+  if (!validator.isEmail(email)) {
     return res.status(400).json({ error: "Invalid email" });
   }
   //validate pswd strength

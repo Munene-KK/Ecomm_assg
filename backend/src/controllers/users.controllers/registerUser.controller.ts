@@ -1,7 +1,7 @@
 import { User } from "../../model/users.model";
 import type { Request, Response } from "express";
 import type { UserRegisterObj } from "../../types/types";
-import { isEmail, isStrongPassword } from "validator";
+import validator from "validator";
 import bcrypt from "bcrypt";
 import { generateUserId } from "../../config/generateID.config";
 
@@ -11,10 +11,10 @@ export const registerUser = async (req: Request, res: Response) => {
     return res.status(400).json({ error: "All fieds are required!" });
   }
   //validate email and password
-  if (!isEmail(email)) {
+  if (!validator.isEmail(email)) {
     res.status(400).json({ error: "Invalid email!" });
   }
-  if (!isStrongPassword(password)) {
+  if (!validator.isStrongPassword(password)) {
     res.status(400).json({ error: "Weak password!" });
   }
 

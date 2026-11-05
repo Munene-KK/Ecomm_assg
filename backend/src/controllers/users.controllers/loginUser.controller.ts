@@ -1,15 +1,20 @@
 import { User } from "../../model/users.model";
 import bcrypt from "bcrypt";
 import type { Request, Response } from "express";
-import { isEmail } from "validator";
+import validator from "validator";
 import type { UserLoginObj } from "../../types/types";
 
 export const loginUser = async (req: Request, res: Response) => {
   const { email, password }: UserLoginObj = req.body;
-  if (!email?.trim() || !password.trim()) {
-    res.status(401).json({ error: "Al fields are required!" });
+  if (
+    typeof email !== "string" ||
+    typeof password !== "string" ||
+    !email.trim() ||
+    !password.trim()
+  ) {
+    return res.status(401).json({ error: "All fields are required!" });
   }
-  if (!isEmail(email)) {
+  if (!validator.isEmail(email)) {
     return res.status(401).json({ error: "Invalid email address!" });
   }
 

@@ -1,7 +1,7 @@
 import { Admin } from "../../model/admin.model";
 import type { Request, Response } from "express";
 import type { AdminsLoginObj } from "../../types/types";
-import { isEmail } from "validator";
+import validator from "validator";
 import bcrypt from "bcrypt";
 import { createToken } from "../../middleware/jwt/createToken.jwt.middleware";
 import { refreshToken } from "../../middleware/jwt/refreshToken.jwt.middleware";
@@ -11,7 +11,7 @@ export const loginAdmin = async (req: Request, res: Response) => {
   if (!email?.trim() || !password?.trim()) {
     return res.status(401).json({ error: "Email and password required!" });
   }
-  if (!isEmail(email)) {
+  if (!validator.isEmail(email)) {
     return res.status(401).json({ error: "Invalid email address" });
   }
   //find the admin

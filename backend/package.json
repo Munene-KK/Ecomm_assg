@@ -4,9 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "bun src/server",
     "dev": "bun --w src/server",
-    "typecheck": "bun check"
+    "typecheck": "bun check",
+    "start": "tsx src/server.ts"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
