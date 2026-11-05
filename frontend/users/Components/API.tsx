@@ -1,6 +1,7 @@
+"use server";
 import axios from "axios";
 export const API = axios.create({
-  baseURL: "http://localhost:3500/api",
+  baseURL: "https://ecomm-assg.onrender.com/api/",
   headers: {
     "Content-Type": "application/json",
   },
