@@ -1,0 +1,38 @@
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.profile-container .profile {
+  width: 12rem;
+  font-size: 9rem;
+  text-align: center;
+  place-content: center;
+  height: 12rem;
+  border-radius: 50%;
+  background-color: #000;
+  color: white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.profile-container .role {
+  color: crimson;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.profile-container .detail {
+  line-height: 1.5;
+}
+.profile-container button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.3rem;
+  font: inherit;
+  background-color: crimson;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+}

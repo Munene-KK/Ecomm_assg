@@ -1,0 +1,49 @@
+.add-products-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.add-products-form form {
+  background-color: white;
+  margin-top: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 2px 4px 12px rgba(128, 128, 128, 0.254);
+}
+.add-products-form form h2 {
+  text-align: center;
+  color: crimson;
+  margin-bottom: 1rem;
+}
+.add-products-form form article {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1rem;
+}
+.add-products-form form article label {
+  margin-bottom: 0.5rem;
+}
+.add-products-form form article input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #333;
+  width: 100%;
+}
+.add-products-form form article textarea {
+  font: inherit;
+  padding: 0.5rem;
+  width: 35rem;
+  height: 10rem;
+}
+.add-products-form form button {
+  width: 100%;
+  padding: 0.5rem;
+  font: inherit;
+  background-color: crimson;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+}

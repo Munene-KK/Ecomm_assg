@@ -1,0 +1,97 @@
+.admin-orders-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-orders {
+  padding: 1.5rem 1rem;
+}
+
+.admin-orders > h1 {
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.admin-order-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.admin-order {
+  min-width: 0;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.admin-order-heading,
+.admin-order-total,
+.admin-order-items li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.admin-order-heading {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-order-heading h2 {
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.admin-order-heading p,
+.admin-order-customer,
+.admin-order-notes {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.admin-order-status {
+  color: crimson;
+  text-transform: capitalize;
+}
+
+.admin-order-customer {
+  padding: 0.75rem 0;
+}
+
+.admin-order-items {
+  list-style: none;
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-order-items li {
+  font-size: 0.9rem;
+}
+
+.admin-order-notes {
+  padding-top: 0.75rem;
+}
+
+.admin-order-total {
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.admin-order-total strong {
+  color: crimson;
+}
+
+@media (max-width: 600px) {
+  .admin-orders {
+    padding: 1rem 0.5rem;
+  }
+
+  .admin-order-heading {
+    flex-direction: column;
+  }
+}

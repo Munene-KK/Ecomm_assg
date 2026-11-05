@@ -1,0 +1,87 @@
+.auth-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.auth-form form {
+  background-color: white;
+  width: min(100%, 440px);
+  padding: clamp(1rem, 5vw, 2rem);
+  margin-bottom: 1rem;
+  box-shadow: 4px 3px 12px rgba(128, 128, 128, 0.401);
+}
+.auth-form form h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.auth-form form aside {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.auth-form form aside .image {
+  object-fit: contain;
+}
+.auth-form form article {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.auth-form form label {
+  margin-bottom: 0.5rem;
+}
+.auth-form form input {
+  font: inherit;
+  border: 1px solid gray;
+  background-color: whitesmoke;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+}
+.showpwd {
+  position: absolute;
+  top: 2.45rem;
+  right: 0.75rem;
+  cursor: pointer;
+}
+.showpwd-signup {
+  position: absolute;
+  top: 2.45rem;
+  right: 0.75rem;
+  cursor: pointer;
+}
+.auth-form form button {
+  width: 100%;
+  font: inherit;
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  background-color: crimson;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+}
+.auth-form form .or-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-form form .rule {
+  border-bottom: 1px solid #333;
+  width: 100%;
+}
+.auth-form form .options-links {
+  line-height: 1.5;
+  text-align: center;
+}
+.auth-form form .options-links a {
+  text-decoration: none;
+}

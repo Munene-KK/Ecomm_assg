@@ -1,0 +1,126 @@
+.users-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  flex-flow: row wrap;
+}
+.buyers {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 4px 3px 12px rgba(128, 128, 128, 0.282);
+  border-radius: 1rem;
+  line-height: 1.4;
+}
+.buyers h3 {
+  color: crimson;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.buyer1 {
+  border: 1px solid #333;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+.admin-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+form h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: crimson;
+}
+form article {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1rem;
+}
+form article label {
+  margin-bottom: 0.5rem;
+}
+form input,
+form select {
+  width: 100%;
+  font: inherit;
+  outline: none;
+  padding: 0.4rem;
+  background-color: whitesmoke;
+  border: 1px solid #333;
+  border-radius: 0.4rem;
+}
+form select option {
+  color: #333;
+  font-weight: bold;
+  border: none;
+}
+form select option:hover {
+  color: green;
+}
+form button {
+  width: 100%;
+  font: inherit;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: crimson;
+  color: white;
+}
+.show-hide {
+  position: relative;
+  top: -2rem;
+  left: 16rem;
+}
+.admin-conatiner {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 5px 4px 12px rgba(128, 128, 128, 0.374) (128, 128, 128, 0.374)
+    (128, 128, 128, 0.374);
+  border-radius: 1rem;
+}
+.admin-conatiner h3 {
+  color: crimson;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.main-account {
+  border: 1px solid #333;
+  line-height: 1.5;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+.main-account h4 {
+  color: crimson;
+  text-align: center;
+}
+.other-admins {
+  border: 1px solid #333;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.other-admins button {
+  font-size: 1.2rem;
+  display: inline-block;
+  font-family: inherit;
+  padding: 0.4rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 0.3rem;
+}
+.admin-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+.active {
+  background-color: rgba(255, 0, 0, 0.554);
+  color: white;
+}
+.delete {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}

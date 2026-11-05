@@ -1,0 +1,95 @@
+footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+/* admin navbar styles */
+.admin-navbar {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  padding: 1rem;
+  align-items: baseline;
+  justify-content: space-around;
+  gap: 3rem;
+  border-radius: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 3px 4px 12px rgba(128, 128, 128, 0.183);
+}
+.admin-navbar h2 {
+  color: crimson;
+}
+.admin-navbar .logo {
+  font-weight: bold;
+  position: relative;
+  top: 0.2rem;
+}
+.admin-navbar nav {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+.admin-navbar .hero {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+.admin-navbar nav {
+  color: #000;
+}
+.admin-navbar nav span:hover {
+  border-bottom: 2px solid crimson;
+}
+
+/* search bar styles */
+.search-bar {
+  width: 35rem;
+  position: relative;
+}
+.search-bar input {
+  background-color: white;
+  border: none;
+  font: inherit;
+  padding: 0.6rem;
+  width: 100%;
+  outline: none;
+  border-radius: 0.6rem;
+  box-shadow: 4px 4px 12px rgba(128, 128, 128, 0.476);
+}
+.search-bar aside {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 3px 4px 13px gray;
+}
+.search-bar aside .search-results {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.8rem;
+}
+.search-details {
+  line-height: 1.5;
+}
+.search-details .price {
+  color: crimson;
+  font-weight: bold;
+}
+.search-results img {
+  object-fit: cover;
+  border-radius: 0.2rem;
+}

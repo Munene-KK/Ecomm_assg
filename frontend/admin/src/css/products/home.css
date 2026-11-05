@@ -1,0 +1,81 @@
+.loading {
+  border: 3px solid crimson;
+  border-top: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation-name: load;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+@keyframes load {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+.products-home {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+figure {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 3px 4px 12px rgba(128, 128, 128, 0.158);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+figure .price {
+  color: crimson;
+  font-weight: bold;
+  margin-top: 0.3rem;
+}
+figure figcaption {
+  margin-top: 0.3rem;
+}
+figure img {
+  object-fit: cover;
+  flex-shrink: none;
+  border-radius: 0.3rem;
+}
+figure:hover {
+  box-shadow: 3px 4px 12px rgba(128, 128, 128, 0.871);
+}
+.products-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.products-actions button {
+  font-family: inherit;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+.delete-product {
+  background-color: red;
+  color: white;
+}
+.update-product {
+  background-color: black;
+  color: white;
+}
